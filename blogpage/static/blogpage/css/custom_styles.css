@@ -1,0 +1,17 @@
+.text-custom-blue {
+    color: #7baedc !important; /* soft pastel blue */
+  }
+  
+  .bg-custom-blue {
+    background-color: #7baedc !important;
+  }
+
+  .email-custom-link {
+    color: #7baedc !important; /* pastel blue or any color you prefer */
+    text-decoration: none; /* optional: remove underline */
+  }
+  
+  .email-custom-link:hover {
+    color: #5593c6 !important; /* slightly darker blue on hover */
+    text-decoration: underline;
+  }

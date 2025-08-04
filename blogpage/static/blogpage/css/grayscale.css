@@ -1,0 +1,13 @@
+.icon-grayscale {
+    width: 65px !important;
+    height: 65px !important;
+    filter: grayscale(100%);
+    max-width: 100%;
+    opacity: 0.8; /* optional: dim a bit */
+    transition: filter 0.3s;
+    display: inline-block;
+  }
+  
+  .icon-grayscale:hover {
+    filter: none;
+  }
