@@ -29,10 +29,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  os.environ["DEBUG"].strip().lower() in ('true', '1', 't')
 
-# ALLOWED_HOSTS = ["jakub.lejk.net",
-#                  "127.0.0.1"]
+ALLOWED_HOSTS = ["jakub.lejk.net",
+                 "127.0.0.1"]
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -48,8 +47,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'middleware.logging_middleware.RequestLoggingMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'middleware.logging_middleware.RequestLoggingMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,7 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles_blog')
+STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

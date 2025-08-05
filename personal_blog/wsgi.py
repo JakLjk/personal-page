@@ -14,3 +14,8 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'personal_blog.settings')
 
 application = get_wsgi_application()
+
+from whitenoise import WhiteNoise
+from pathlib import Path
+
+application = WhiteNoise(application, root=os.path.join(Path(__file__).resolve().parent.parent, "staticfiles"))
