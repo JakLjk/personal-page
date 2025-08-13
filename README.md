@@ -1,9 +1,16 @@
 # Jakub Lejk – Personal Blog & Portfolio
 
-Welcome to my personal blog and digital portfolio, built with Django and managed using Poetry.  
-This project is a curated showcase of my experience, certifications, projects, skills, and freelance services — all wrapped in a polished, responsive frontend.
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](#)
+
+[![Django](https://img.shields.io/badge/Django-5.2.4-092E20?logo=django&logoColor=white&style=flat-square)](#)
+[![WhiteNoise](https://img.shields.io/badge/WhiteNoise-6.9.0-blue?style=flat-square)](#)
+
+
 
 ## About the Project
+
+Welcome to my personal blog and digital portfolio, built with Django and managed using Poetry.  
+This project is a curated showcase of my experience, certifications, projects, skills, and freelance services — all wrapped in a polished, responsive frontend.
 
 It features:
 - A professional resume-style homepage

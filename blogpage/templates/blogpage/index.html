@@ -23,6 +23,15 @@
         <link href="{% static 'blogpage/css/dog_wrapper.css' %}" rel="stylesheet" />
         <link href="{% static 'blogpage/css/projects.css' %}" rel="stylesheet" />
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0MQNQ5GC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PF0MQNQ5GC');
+    </script>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue fixed-top" id="sideNav">
@@ -55,7 +64,7 @@
                     </h1>
                     <div class="subheading mb-5">
                         Ruda Slaska, Poland· (+48) 510-823-879 ·
-                        <a href="mailto:name@email.com", class="email-custom-link">jakub@lejk.net</a>
+                        <a href="mailto:name@email.com" class="email-custom-link">jakub@lejk.net</a>
                     </div>
                     <p class="lead mb-5">I’m an experienced Business Intelligence Analyst specializing in end-to-end data solutions. My expertise spans the entire data life cycle - from setting up servers and databases, through data extraction, transformation, and modeling, to building insightful reports and visualizations.  In addition to my BI work, I also provide freelance services in web scraping, data transformation, API integration, and web application development.</p>
                     <div class="social-icons">
@@ -333,6 +342,30 @@
                             <img src="{% static 'blogpage/assets/img/business_info_api.png' %}" alt="Dashboard Screenshot" class="project-image">
                             <h4>Business Data API</h4>
                             <p>Backend API responsible for scraping, transforming and storing data about businesses, so they can be later served to the Business Info Poland Web App</p>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-tile">
+                            <a href="https://github.com/JakLjk/PostgreSQL-Kafka-CDC-Compose" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
+                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
+                            <h4>Docker Compose for PostgreSQL + Kafka </h4>
+                            <p>Out-of-the-box docker compose file, with predefined settings that add streaming capability to PostgreSQL DB. New records can be ingested, for example, by Spark Streaming Service</p>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-tile">
+                            <a href="https://github.com/JakLjk/Grafana-Prometheus-Compose" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
+                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
+                            <h4>Docker Compose for Grafana + Prometheus Stack</h4>
+                            <p>Project that simplifies setting up Grafana + Prometheus. Has in-build support for Cadvisor exporter (docker image logs) and node exporter (sys logs)</p>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-tile">
+                            <a href="https://github.com/JakLjk/SPARK-CLUSTER-LOCAL-COMPOSE" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
+                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
+                            <h4>Docker Compose for SPARK</h4>
+                            <p>This project allows for setting up Spark clusters on your local machines. Docker images install all necessary dependecies, such as Java and PySpark, so the user just builds the stack with makefile, without any dependency management.</p>
                         </div>
                     </div>
                 </div>

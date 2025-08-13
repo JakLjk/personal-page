@@ -15,3 +15,25 @@
     color: #5593c6 !important; /* slightly darker blue on hover */
     text-decoration: underline;
   }
+
+  .project-tile {
+    position: relative;  /* Creates a positioning context */
+    overflow: hidden;    /* Prevents overlay spill if layout shifts */
+  }
+  
+  .project-tile > .tile-link {
+    position: absolute;
+    inset: 0;            /* top: 0; right: 0; bottom: 0; left: 0 */
+    z-index: 2;
+    display: block;
+    text-indent: -9999px; /* hides link text if any */
+  }
+  
+  .project-tile img,
+  .project-tile h4,
+  .project-tile p {
+    position: relative;
+    z-index: 3;           /* Ensure text and image are above the overlay if needed */
+    pointer-events: none; /* Prevent these from blocking the overlay click */
+  }
+  
