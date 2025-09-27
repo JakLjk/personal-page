@@ -32,6 +32,12 @@
 
     gtag('config', 'G-PF0MQNQ5GC');
     </script>
+    <!-- Cloudflare Web Analytics -->
+    <script 
+    defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+    data-cf-beacon='{"token": "89f70251427446b0a0f8ab5d2b055a04"}'>
+    </script>
+    <!-- End Cloudflare Web Analytics -->
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue fixed-top" id="sideNav">
@@ -172,6 +178,9 @@
                         </li>
                         <li class="list-inline-item">
                             <img src="{% static 'blogpage/assets/img/spark.svg' %}" alt="Apache Spark Logo" class="icon-grayscale" title="Apache Spark">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'blogpage/assets/img/airflow.svg' %}" alt="Apache Spark Logo" class="icon-grayscale" title="Apache Airflow">
                         </li>
                         <li class="list-inline-item">
                             <img src="{% static 'blogpage/assets/img/debian.svg' %}" alt="Debian Logo" class="icon-grayscale" title="Debian">
@@ -324,52 +333,86 @@
                     </ul>
                 </div>
             </section>
+
+
+            <!-- Projects -->
             <section class="resume-section" id="projects">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-                    <div class="project-grid">
-                        <!-- Project 1 -->
-                        <div class="project-tile">
-                            <a href="https://firmy.lejk.net" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
-                            <img src="{% static 'blogpage/assets/img/business_info_web.png' %}" alt="Web Scraping Tool" class="project-image">
-                            <h4>Business Info Poland</h4>
-                            <p>A Web application that allows user to search for company based in Poland, in order to recieve detailed information about business and to bulk-downlaod business statements of this company</p>
-                        </div>
-            
-                        <!-- Project 2 -->
-                        <div class="project-tile">
-                            <a href="https://github.com/JakLjk/BUSINESS-DATA-API" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
-                            <img src="{% static 'blogpage/assets/img/business_info_api.png' %}" alt="Dashboard Screenshot" class="project-image">
-                            <h4>Business Data API</h4>
-                            <p>Backend API responsible for scraping, transforming and storing data about businesses, so they can be later served to the Business Info Poland Web App</p>
-                        </div>
+            <div class="resume-section-content">
+                <h2 class="mb-5">Projects</h2>
 
-                        <!-- Project 3 -->
-                        <div class="project-tile">
-                            <a href="https://github.com/JakLjk/PostgreSQL-Kafka-CDC-Compose" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
-                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
-                            <h4>Docker Compose for PostgreSQL + Kafka </h4>
-                            <p>Out-of-the-box docker compose file, with predefined settings that add streaming capability to PostgreSQL DB. New records can be ingested, for example, by Spark Streaming Service</p>
-                        </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
 
-                        <!-- Project 4 -->
-                        <div class="project-tile">
-                            <a href="https://github.com/JakLjk/Grafana-Prometheus-Compose" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
-                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
-                            <h4>Docker Compose for Grafana + Prometheus Stack</h4>
-                            <p>Project that simplifies setting up Grafana + Prometheus. Has in-build support for Cadvisor exporter (docker image logs) and node exporter (sys logs)</p>
-                        </div>
-
-                        <!-- Project 5 -->
-                        <div class="project-tile">
-                            <a href="https://github.com/JakLjk/SPARK-CLUSTER-LOCAL-COMPOSE" class="tile-link" target="_blank" rel="noopener noreferrer"></a>
-                            <img src="{% static 'blogpage/assets/img/docker_compose_project.png' %}" alt="Dashboard Screenshot" class="project-image">
-                            <h4>Docker Compose for SPARK</h4>
-                            <p>This project allows for setting up Spark clusters on your local machines. Docker images install all necessary dependecies, such as Java and PySpark, so the user just builds the stack with makefile, without any dependency management.</p>
-                        </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <img src="{% static 'blogpage/assets/img/project_logo_krsapi.png' %}"
+                            alt="Polish Business Data Delivery [API]"
+                            loading="lazy" style="object-fit:cover;">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Polish Business Data Delivery [API]</h5>
+                        <p class="card-text">
+                        FastAPI-based service for scraping, parsing, and serving company information from Poland's National Court Register
+                        </p>
+                        <a href="https://projects.lejk.net/14/"
+                        class="btn btn-project mt-auto" target="_blank" rel="noopener noreferrer">Read more</a>
+                    </div>
                     </div>
                 </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <img src="{% static 'blogpage/assets/img/project_logo_cepik_bi.png' %}"
+                            alt="Polish Car Market Analysis [PowerBI]"
+                            loading="lazy" style="object-fit:cover;">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Polish Car Market Analysis [PowerBI]</h5>
+                        <p class="card-text">
+                        This project presents an interactive Power BI report built on Poland's CEPIK database serving car registration informations.
+                        </p>
+                        <a href="https://projects.lejk.net/15/"
+                        class="btn btn-project mt-auto" target="_blank" rel="noopener noreferrer">See dashboard</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <img src="{% static 'blogpage/assets/img/project_logo_dns_checker.png' %}"
+                            alt="Domain Availability Checker Tool [WHOIS]"
+                            loading="lazy" style="object-fit:cover;">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Domain Availability Checker Tool [WHOIS]</h5>
+                        <p class="card-text">
+                        This toolkit allows for checking domain availibility by providing it's name or by automating the process for passed dicitonary of domains.
+                        </p>
+                        <a href="https://projects.lejk.net/9/"
+                        class="btn btn-project mt-auto" target="_blank" rel="noopener noreferrer">Read more</a>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-4 text-center">
+                <a class="btn btn-deep-primary" href="https://projects.lejk.net"
+                    target="_blank" rel="noopener noreferrer">
+                    Visit my full Projects page
+                </a>
+                </div>
+            </div>
             </section>
+            <hr class="m-0" />
+
+
+
+
             <section class="resume-section" id="freelance">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Freelance Services</h2>
